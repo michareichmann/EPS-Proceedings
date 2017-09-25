@@ -1,0 +1,43 @@
+\documentclass{PoS}
+\input{newcommands}
+\input{extrapackages}
+
+\makeatletter
+\def\input@path{ {sections/} }
+\makeatother
+
+\title{Diamond Detector Technology: Status and Perspectives}
+\ShortTitle{Diamond Detector Technology: Status and Perspectives}
+
+\author{\speaker{Michael Reichmann}%
+        \thanks{The full list of RD42 authors is provided in the appendix.}\\
+       Eidgenoessische Technische Hochschule Zuerich (CH)\\
+       E-mail: \email{michael.reichmann@cern.ch}}
+
+\abstract{Here could be your abstract ;-)}
+
+\FullConference{The European Physical Society Conference on High Energy Physics\\
+         5-12 July\\
+         Venice, Italy}
+
+% \bibliographystyle{plain}
+% \addbibresource{refs.bib}
+
+\makeindex
+\begin{document}
+
+%============= 1 =============
+\section{Introduction}
+\input{Intro}
+
+
+% ========== ACRONYMS ===========================
+\newpage
+\section*{List of Acronyms}
+\input{acros}
+
+% ========== BIBLIOGRAPHY =======================
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document} 
