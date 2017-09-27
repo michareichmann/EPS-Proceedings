@@ -2,6 +2,7 @@
 \input{newcommands}
 \input{extrapackages}
 
+\graphicspath{ {pics/} }
 \makeatletter
 \def\input@path{ {sections/} }
 \makeatother
@@ -20,15 +21,16 @@
          5-12 July\\
          Venice, Italy}
 
-% \bibliographystyle{plain}
-% \addbibresource{refs.bib}
-
 \makeindex
 \begin{document}
 
 %============= 1 =============
 \section{Introduction}
 \input{Intro}
+
+%============= 1 =============
+\section{Diamond Detectors at CERN}
+\input{Usage}
 
 
 % ========== ACRONYMS ===========================
@@ -37,6 +39,7 @@
 \input{acros}
 
 % ========== BIBLIOGRAPHY =======================
+\newpage
 \bibliographystyle{plain}
 \bibliography{refs}
 
