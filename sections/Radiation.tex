@@ -1,0 +1,29 @@
+In order to probe the radiation tolerance of \ac{CVD} diamond sensors several radiation studies have been performed varying the types and energies of damaging particles. The sensors were irradiated with protons with energies of \SI{24}{\giga\electronvolt}, \SI{800}{\mega\electronvolt}, \SI{70}{\mega\electronvolt} and \SI{25}{\mega\electronvolt}, \SI{1}{\mega\electronvolt} neutrons and \SI{200}{\mega\electronvolt} pions up to a maximum dose of \SI{2.2e16}{p\per\centi\meter^2}.
+
+\subsection{Preparation of the Detector}
+
+In a first step the surface of the raw diamond sensor has to be polished, cleaned and prepared for photo-lithography. Using the photo-lithography a metallisation pattern is then brought on the surface of the diamond. Depending on the pattern three types of detectors can be created: pad, strip and pixel detectors. This process is done for both of the sides of the diamond sensor whereby an almost edgeless design is obtained. By using a segmentation of the detector one can probe the charge of the detector depending on the position of the sensor which is critical for radiation studies. In this case solely strip detectors were used which were then mounted and connected to an amplifier to read out the charge of each strip. An image of the metallisation pattern and an example of a final detector are shown in figure \vref{rad1}.
+
+\begin{figure}
+	\centering
+	\subfig[.43]{RadMetal.png}{.21}{Strip metallisation pattern}
+	\subfigp[.55]{StripVA.jpg}{.21}{A mounted diamond detector with amplifier}
+	\caption{Detector for radiation studies}
+	\label{rad1}
+\end{figure}
+
+\subsection{Setup}
+
+The characterisation of the irradiated devices was performed at the \ac{SPS} beam line at CERN with \acp{MIP} with momenta of the order of \SI{100}{\giga\electronvolt/c}. By using a customised beam telescope with a spacial resolution of \SI{\sim2}{\micro\meter} one obtains an unbiased or transparent hit prediction of the particle track in the diamond sensor. The schematic setup is shown in figure \vref{rad2}. Two pairs of crossing silicon strip detectors are positioned equally spaced in front and after the \ac{DUT}. At the end of the telescope is a scintillator as reference.
+
+\figcl{RadTel.png}{.15}{Schematic beam test setup}{rad2}
+
+\subsection{Results}
+
+The signal behaviour of irradiated material follows the simple damage equation where $\z{n}_0$ is
+\begin{align}
+	\z{n} 				&= \z{n}_0 + \z{k}\upphi\\
+	\frac{1}{\z{mfp}}	&= \frac{1}{\z{mfp}_0} + \z{k}\upphi
+\end{align}
+ the initial number of traps, $\z{mfp}_0$ is the initial mean free path, k a damage constant and $\upphi$ the fluence.
+
