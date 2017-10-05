@@ -166,7 +166,7 @@
 \RequirePackage{mathptmx}
 \ifpdf
       \RequirePackage[pdftex]{graphicx}
-      \DeclareGraphicsExtensions{.pdf,.jpg,.jpeg}
+      \DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.png}
 \else
       \RequirePackage{graphicx}
       \DeclareGraphicsExtensions{.ps,.eps,.pstex}
@@ -396,7 +396,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% PoS HEADINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\ps@PoS{%
-    \def\@oddfoot{\if@titlepage\ifnum\thepage=0%
+    \def\@oddfoot{\if@titlepage\ifnum\thepage=1%
 		\PoScopyright@box\hfill% copyright only on front page
 		\if@PoSspecialurl\PoSspecial@url\else\unhbox\PoSpaper@url\fi\fi%possible url
 		\else\reset@font\hfil\thepage\hfil\fi} % page numbers on other pages
@@ -475,10 +475,13 @@
     %
     \vskip \titlesk@b		   % vspace between rule and authors
     %
+    {\Large \bfseries \sffamily The RD42 Collaboration}  % collaboration
+    %
     {\normalsize \bfseries \sffamily% AUTHOR(S)
       \@author \par}
     %
-    \vskip \titlesk@c              % vspace between authors and abstract
+    \affiliation@box
+    \vskip \titlesk@a              % vspace between authors and abstract
     %
     \centerline{\parbox{.9\textwidth}%	% ABSTARCT (narrower)
       {\abstract@cs}}%
@@ -681,6 +684,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%% Full Conference Info %%%%%%%%%%%%%%%%%%%%%%%
 \gdef\FullConference@box{\relax}
 \newcommand\FullConference[1]{\gdef\FullConference@box{
+			 \vbox{\small\raggedright
+			   \it #1}}\@conftrue}
+%%%%%%%%%%%%%%%%%%%%%%%%%% AFFILIATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\gdef\affiliation@box{\relax}
+\newcommand\affiliation[1]{\gdef\affiliation@box{
 			 \vbox{\small\raggedright
 			   \it #1}}\@conftrue}
 %%%%%%%%%%%%%%%%%%%%%%%%%% COPYRIGHT DATE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
