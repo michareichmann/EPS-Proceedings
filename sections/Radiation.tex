@@ -1,5 +1,24 @@
-In order to probe the radiation tolerance of \ac{CVD} diamond sensors several radiation studies have been performed varying the types and energies of damaging particles. The sensors were irradiated with protons with energies of \SI{24}{\giga\electronvolt}, \SI{800}{\mega\electronvolt}, \SI{70}{\mega\electronvolt} and \SI{25}{\mega\electronvolt}, \SI{1}{\mega\electronvolt} neutrons and \SI{200}{\mega\electronvolt} pions up to a maximum dose of \SI{2.2e16}{p\per\centi\meter^2} which is equivalent to \SI{\sim500}{\mega rad}.\\
-In order to built a detector out of a \ac{CVD} diamond sensor a specific recipe is applied where the diamond gets metallised \cite{sussmann}. Depending on the geometry of the metallisation pattern, pad, strip and pixel detectors can be built. For the radiation studies a strip pattern was chosen in order to have a segmentation of the sensor.\\ 
+In order to probe the radiation tolerance of \ac{CVD} diamond sensors several radiation studies have been performed varying the types and energies of damaging particles. The sensors were irradiated with protons of different energies (\SI{24}{\giga\electronvolt}, \SI{800}{\mega\electronvolt}, \SI{70}{\mega\electronvolt}, \SI{25}{\mega\electronvolt}), \SI{\sim1}{\mega\electronvolt} reactor neutrons and \SI{200}{\mega\electronvolt} pions up to a maximum dose of \SI{2.2e16}{p\per\centi\meter^2} which is equivalent to \SI{\sim500}{\mega rad}.\par
+
+\begin{table}[t]
+	\centering
+	\footnotesize
+	\begin{tabular}[c]{l|l|l}
+		\noalign{\hrule height 1pt}
+		\multicolumn{1}{c|}{\textbf{Particle}} & \multicolumn{1}{c|}{\textbf{Energy}} & \multicolumn{1}{c}{\textbf{Relative $\upkappa$}} \\\hline
+		Proton 	& \SI{24}{\giga\electronvolt} 	& $1.0$ 			\\\hline
+				& \SI{800}{\mega\electronvolt} 	& $1.79 \pm 0.13$ 	\\\hline
+				& \SI{70}{\mega\electronvolt} 	& $2.4 	\pm 0.4$ 	\\\hline
+				& \SI{25}{\mega\electronvolt} 	& $4.5 	\pm 0.6$ 	\\\hline
+		Neutron	& \SI{\sim1}{\mega\electronvolt} 	& $4.5 	\pm 0.5$ 	\\\hline
+		Pion	& \SI{200}{\mega\electronvolt} 	& $2.5 	- 3$ 		\\
+		\noalign{\hrule height 1pt}
+	\end{tabular}
+	\caption{Damage constants for various irradiations normalised to \SI{24}{\giga\electronvolt} protons}
+	\label{trad}
+\end{table}	
+
+In order to build a detector out of a \ac{CVD} diamond sensor a specific recipe is applied where the diamond is cleaned and metallised \cite{sussmann}. Depending on the geometry of the metallisation pattern, pad, strip and pixel detectors can be built. For the radiation studies a strip pattern was chosen in order to correlate pulse height and position information.\par
 %%%%%%%%%%%%%%%%%%%% PREPARATION %%%%%%%%%%%%%%%%%
 % In a first step the surface of the raw diamond sensor has to be polished, cleaned and prepared for photo-lithography. Using the photo-lithography a metallisation pattern is then brought on the surface of the diamond. Depending on the pattern three types of detectors can be created: pad, strip and pixel detectors. This process is done for both of the sides of the diamond sensor whereby an almost edgeless design is obtained. By using a segmentation of the detector one can probe the charge of the detector depending on the position of the sensor which is critical for radiation studies. In this case solely strip detectors were used which were then mounted and connected to an amplifier to read out the charge of each strip. An image of the metallisation pattern and an example of a final detector are shown in Figure \vref{rad1}.
 % \begin{figure}
@@ -10,7 +29,7 @@ In order to built a detector out of a \ac{CVD} diamond sensor a specific recipe 
 % 	\label{rad1}
 % \end{figure}
 %%%%%%%%%%%%%%%%%%%% SETUP %%%%%%%%%%%%%%%%%%%%%%
-The characterisation of the irradiated devices was performed at a \ac{SPS} beam line at CERN with charged hadrons with momenta of the order of \SI{100}{\giga\electronvolt/c}. By using a customised beam telescope with a spacial resolution of \SI{\sim2}{\micro\meter} one obtains an unbiased hit prediction of the particle track in the diamond sensor.\\
+The characterisation of the irradiated devices was performed at a \ac{SPS} beam line at CERN using charged hadrons with momenta of the order of \SI{120}{\giga\electronvolt/c}. By using a customised beam telescope with a spacial resolution of \SI{\sim2}{\micro\meter} one obtains an unbiased hit prediction of the particle track in the diamond sensor.\par
 % The schematic setup is shown in Figure \vref{rad2}.
 % \figcl{RadTel.png}{.15}{Schematic beam test setup consisting of two pairs of crossing silicon strip detectors on each side of the \ac{DUT} and a scintillator in the end as reference.}{rad2}
 %%%%%%%%%%%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%%%%%
@@ -22,40 +41,20 @@ The signal behaviour of irradiated material follows the simple damage equation w
 \end{equation}
 
 \noindent
-\ac{MFP} $\uplambda_0$, the damage constant $\upkappa$ and the fluence $\upphi$. Since the measurable quantity is the \ac{CCD} we have to use a model to find a relation to the mean free path \cite{felix}.
-
+\ac{MFP} $\uplambda_0$, the damage constant $\upkappa$ and the fluence $\upphi$. Since the measurable quantity is the \ac{CCD} we have to use an assumption to find a relation to the mean free path \cite{felix}.\par
 % The \ac{CCD} is the average distance between an electron-hole pair until it is trapped. For a \ac{sc}\ac{CVD} diamond it is about the same size as the its thickness, for the \ac{p}\ac{CVD} the \ac{CCD} is in general smaller than the thickness. In order to find the relation between \ac{CCD} and \ac{MFP} we have to correct our data with some simple assumptions like taking the same \ac{MFP} for electrons and holes. This relates to the following equation:
 % \begin{equation}
 % 	\frac{\z{ccd}}{\z{t}} = \sum_i \frac{\z{mfp}_i}{\z{t}}\left(1-\frac{\z{mfp}_i}{\z{t}}\left(1-\z{e}^{-\frac{\z{t}}{\z{mfp}_i}}\right)\right)
 % \end{equation}
 % \noindent
-
-The results of two different types of irradiation are shown in Figure \vref{rad3}. As seen in the examples all of the tested samples follow the equation \vref{erad}. Table \vref{trad} shows all the extracted damage constants. As expected neutrons and low energy protons create the biggest damage in the material.
+The results of two different types of irradiation are shown in Figure \vref{rad3}. As seen in the examples all of the tested samples follow the equation \vref{erad}. Table \vref{trad} shows all the extracted damage constants.
 
 \begin{figure}
 	\centering
 	\subfig[.55]{Damage24.png}{.21}{\SI{24}{\giga\electronvolt} protons at CERN PS}
 	\subfig[.43]{Damage800.png}{.21}{\SI{800}{\mega\electronvolt} protons at LANL}
-	\caption{Irradiation results}
+	\caption{Irradiation results for two different proton energies. The solid line is a fit using equation \vref{erad}.}
 	\label{rad3}
 \end{figure}
-
-\begin{table}
-	\centering
-	\footnotesize
-	\begin{tabular}[c]{l|l|l}
-		\noalign{\hrule height 1pt}
-		\multicolumn{1}{c|}{\textbf{Particle}} & \multicolumn{1}{c|}{\textbf{Energy}} & \multicolumn{1}{c}{\textbf{Relative $\upkappa$}} \\\hline
-		Proton 	& \SI{24}{\giga\electronvolt} 	& $1.0$ 			\\\hline
-				& \SI{800}{\mega\electronvolt} 	& $1.79 \pm 0.13$ 	\\\hline
-				& \SI{70}{\mega\electronvolt} 	& $2.4 	\pm 0.4$ 	\\\hline
-				& \SI{25}{\mega\electronvolt} 	& $4.5 	\pm 0.6$ 	\\\hline
-		Neutron	& \SI{1}{\mega\electronvolt} 	& $4.5 	\pm 0.5$ 	\\\hline
-		Pion	& \SI{200}{\mega\electronvolt} 	& $2.5 	- 3$ 		\\
-		\noalign{\hrule height 1pt}
-	\end{tabular}
-	\caption{Damage constants for various irradiation types normalised to \SI{24}{\giga\electronvolt} protons}
-	\label{trad}
-\end{table}
 
 
