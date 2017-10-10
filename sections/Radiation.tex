@@ -29,11 +29,11 @@ In order to build a detector out of a \ac{CVD} diamond sensor a specific recipe 
 % 	\label{rad1}
 % \end{figure}
 %%%%%%%%%%%%%%%%%%%% SETUP %%%%%%%%%%%%%%%%%%%%%%
-The characterisation of the irradiated devices was performed at a \ac{SPS} beam line at CERN using charged hadrons with momenta of the order of \SI{120}{\giga\electronvolt/c}. By using a customised beam telescope with a spacial resolution of \SI{\sim2}{\micro\meter} one obtains an unbiased hit prediction of the particle track in the diamond sensor.\par
+The characterisation of the irradiated devices was performed at a \ac{SPS} beam line at CERN using charged hadrons with momenta of the order of \SI{120}{\giga\electronvolt/c}. By using a customised beam telescope with a spatial resolution of \SI{\sim2}{\micro\meter} one obtains an unbiased hit prediction of the particle track in the diamond sensor.\par
 % The schematic setup is shown in Figure \vref{rad2}.
 % \figcl{RadTel.png}{.15}{Schematic beam test setup consisting of two pairs of crossing silicon strip detectors on each side of the \ac{DUT} and a scintillator in the end as reference.}{rad2}
 %%%%%%%%%%%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%%%%%
-The signal behaviour of irradiated material follows the simple damage equation with the initial 
+The signal behaviour of irradiated material follows the simple damage equation
 
 \begin{equation}
 % 	\z{n} 				&= \z{n}_0 + \z{k}\upphi\\
@@ -41,7 +41,7 @@ The signal behaviour of irradiated material follows the simple damage equation w
 \end{equation}
 
 \noindent
-\ac{MFP} $\uplambda_0$, the damage constant $\upkappa$ and the fluence $\upphi$. Since the measurable quantity is the \ac{CCD} we have to use an assumption to find a relation to the mean free path \cite{felix}.\par
+with the initial \ac{MFP} $\uplambda_0$, the damage constant $\upkappa$ and the fluence $\upphi$. Since the measurable quantity is the \ac{CCD} we have to use an assumption to find a relation to the \ac{MFP} \cite{felix}.\par
 % The \ac{CCD} is the average distance between an electron-hole pair until it is trapped. For a \ac{sc}\ac{CVD} diamond it is about the same size as the its thickness, for the \ac{p}\ac{CVD} the \ac{CCD} is in general smaller than the thickness. In order to find the relation between \ac{CCD} and \ac{MFP} we have to correct our data with some simple assumptions like taking the same \ac{MFP} for electrons and holes. This relates to the following equation:
 % \begin{equation}
 % 	\frac{\z{ccd}}{\z{t}} = \sum_i \frac{\z{mfp}_i}{\z{t}}\left(1-\frac{\z{mfp}_i}{\z{t}}\left(1-\z{e}^{-\frac{\z{t}}{\z{mfp}_i}}\right)\right)
